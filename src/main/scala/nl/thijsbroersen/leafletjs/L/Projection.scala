@@ -3,14 +3,14 @@ package nl.thijsbroersen.leafletjs.L
 import nl.thijsbroersen.leafletjs.L
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{ JSGlobal }
+import scala.scalajs.js.annotation.{JSGlobal}
 
 @js.native
 @JSGlobal("L.Projection")
 object Projection extends js.Object {
 
-  val LonLat: L.Projection = js.native
-  val Mercator: L.Projection = js.native
+  val LonLat: L.Projection            = js.native
+  val Mercator: L.Projection          = js.native
   val SphericalMercator: L.Projection = js.native
   //    @js.native
   //    @JSName("L.Projection.Mercator")
@@ -23,8 +23,8 @@ object Projection extends js.Object {
 
 @js.native
 trait Projection extends js.Object {
-  def project(latlng: LatLng): Point = js.native
+  def project(latlng: LatLng): Point  = js.native
   def unproject(point: Point): LatLng = js.native
 
-  def bounds: LatLngBounds
+  def bounds: LatLngBounds = js.native
 }

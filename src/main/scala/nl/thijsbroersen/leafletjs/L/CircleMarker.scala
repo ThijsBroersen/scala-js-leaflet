@@ -4,16 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal
 
 /**
- * Created by thijs on 12-4-17.
- */
+  * Created by thijs on 12-4-17.
+  */
 @js.native
 trait CircleMarker extends Path {
 
-  def toGeoJSON(): GeoJSON = js.native
-  def getLatLng(): LatLng = js.native
+  def toGeoJSON(): GeoJSON                  = js.native
+  def getLatLng(): LatLng                   = js.native
   def setLatLng(latlngs: LatLng): this.type = js.native
-  def getRadius(): LatLng = js.native
-  def setRadius(radius: Int): Int = js.native
+  def getRadius(): LatLng                   = js.native
+  def setRadius(radius: Double): this.type  = js.native
 }
 
 @js.native

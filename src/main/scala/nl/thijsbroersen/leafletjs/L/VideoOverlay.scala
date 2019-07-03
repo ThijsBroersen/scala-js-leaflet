@@ -1,14 +1,14 @@
 package nl.thijsbroersen.leafletjs.L
 
-import org.scalajs.dom.raw.{ HTMLElement, HTMLVideoElement }
+import org.scalajs.dom.raw.{HTMLElement, HTMLVideoElement}
 
 import scala.scalajs.js
 import scala.scalajs.js.|
 import scala.scalajs.js.annotation.JSGlobal
 
 /**
- * Created by thijs on 12-4-17.
- */
+  * Created by thijs on 12-4-17.
+  */
 @js.native
 trait VideoOverlay extends ImageOverlay {
   override def getElement(): HTMLVideoElement = js.native
@@ -22,7 +22,9 @@ object VideoOverlay extends Class {}
 @JSGlobal("L.videoOverlay")
 object videoOverlay extends js.Object {
 
-  def apply(videoUrl: String | js.Array[String], bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): VideoOverlay = js.native
+  def apply(videoUrl: String | js.Array[String] | HTMLVideoElement,
+            bounds: LatLngBounds,
+            options: js.UndefOr[js.Dictionary[Any]] = js.undefined): VideoOverlay = js.native
   //  def wms(baseUrl: js.UndefOr[String] = js.undefined, options: js.UndefOr[js.Object] = js.undefined): L.WMSlayer = js.native
 }
 

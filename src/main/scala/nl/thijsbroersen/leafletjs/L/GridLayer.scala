@@ -4,20 +4,20 @@ import org.scalajs.dom.raw.HTMLElement
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal
+
 /**
- * Created by thijs on 12-4-17.
- */
+  * Created by thijs on 12-4-17.
+  */
 @js.native
 trait GridLayer extends Layer {
-  def bringToFront(): this.type = js.native
-  def bringToBack(): this.type = js.native
-  def getContainer(): HTMLElement = js.native
+  def bringToFront(): this.type              = js.native
+  def bringToBack(): this.type               = js.native
+  def getContainer(): HTMLElement            = js.native
   def setOpacity(opacity: Double): this.type = js.native
-  def setZIndex(zIndex: Int): this.type = js.native
-  def isLoading(): Boolean = js.native
-  def redraw(): this.type = js.native
-  def getTileSize(): Point = js.native
-  def createTile(coords: Point, done: js.UndefOr[js.Function0[Unit]] = js.undefined): HTMLElement
+  def setZIndex(zIndex: Int): this.type      = js.native
+  def isLoading(): Boolean                   = js.native
+  def redraw(): this.type                    = js.native
+  def getTileSize(): Point                   = js.native
 }
 
 @js.native

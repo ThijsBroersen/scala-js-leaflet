@@ -11,7 +11,7 @@ object PosAnimation extends js.Any {
   def apply(): PosAnimation = js.native
 
   @js.native
-  trait start extends Event
+  trait start extends Event //TODO: test
   @js.native
   trait step extends Event
   @js.native
@@ -20,6 +20,9 @@ object PosAnimation extends js.Any {
 
 @js.native
 trait PosAnimation extends Evented {
-  def run(el: HTMLElement, newPos: Point, duration: js.UndefOr[Double] = js.undefined, easeLinearity: js.UndefOr[Double] = js.undefined): Unit = js.native
-  def stop(): Unit = js.native
+  def run(el: HTMLElement,
+          newPos: Point,
+          duration: js.UndefOr[Double] = js.undefined,
+          easeLinearity: js.UndefOr[Double] = js.undefined): Unit = js.native
+  def stop(): Unit                                                = js.native
 }

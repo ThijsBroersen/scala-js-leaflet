@@ -4,8 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal
 
 @js.native
+trait Transformation extends Icon {
+  def transform(point: Point, scale: js.UndefOr[Double] = js.undefined): Point   = js.native
+  def untransform(point: Point, scale: js.UndefOr[Double] = js.undefined): Point = js.native
+}
+
+@js.native
 @JSGlobal("L.Transformation")
-class Transformation(a: Int, b: Int, c: Int, d: Int) extends js.Object {
-  def transform(point: Point, scale: Double): Point = js.native
-  def untransform(point: Point, scale: Double): Point = js.native
+object Transformation extends js.Any {}
+
+@js.native
+@JSGlobal("L.transformation")
+object transformation extends js.Any {
+
+  def apply(a: Int, b: Int, c: Int, d: Int): Transformation = js.native
 }

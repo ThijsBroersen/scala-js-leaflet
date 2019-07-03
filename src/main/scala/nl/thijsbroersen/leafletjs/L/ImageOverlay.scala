@@ -1,26 +1,21 @@
 package nl.thijsbroersen.leafletjs.L
 
-import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.{HTMLElement, HTMLImageElement}
 
 import scala.scalajs.js
+import scala.scalajs.js.|
 import scala.scalajs.js.annotation.JSGlobal
 
 /**
- * Created by thijs on 12-4-17.
- */
+  * Created by thijs on 12-4-17.
+  */
 @js.native
-trait ImageOverlay extends Layer {
-  def setOpacity(opacity: Double): this.type = js.native
-  def bringToFront(): this.type = js.native
-  def bringToBack(): this.type = js.native
-  def setUrl(url: String): this.type = js.native
-  def setBounds(bounds: LatLngBounds): this.type = js.native
-  def getBounds(): LatLngBounds = js.native
+trait ImageOverlay extends Overlay {
 
   /**
-   *
-   * @return HTMLElement, which is an instance of HTMLImageElement
-   */
+    *
+    * @return HTMLElement, which is an instance of HTMLImageElement
+    */
   def getElement(): HTMLElement = js.native
 }
 
@@ -32,7 +27,9 @@ object ImageOverlay extends Class {}
 @JSGlobal("L.imageOverlay")
 object imageOverlay extends js.Object {
 
-  def apply(imageUrl: String, bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): ImageOverlay = js.native
+  def apply(imageUrl: String | HTMLImageElement,
+            bounds: LatLngBounds,
+            options: js.UndefOr[js.Dictionary[Any]] = js.undefined): ImageOverlay = js.native
   //  def wms(baseUrl: js.UndefOr[String] = js.undefined, options: js.UndefOr[js.Object] = js.undefined): L.WMSlayer = js.native
 }
 

@@ -13,10 +13,10 @@ trait LatLng extends js.Object {
   def alt: Double
 
   def equals(otherLatLng: LatLng, maxMargin: js.UndefOr[Int] = js.undefined): Boolean = js.native
-  def distanceTo(otherLatLng: LatLng): Double = js.native
-  def wrap(): LatLng = js.native
-  def toBounds(sizeInMeters: Int): LatLngBounds = js.native
-  override def toString(): String = js.native
+  def distanceTo(otherLatLng: LatLng): Double                                         = js.native
+  def wrap(): LatLng                                                                  = js.native
+  def toBounds(sizeInMeters: Int): LatLngBounds                                       = js.native
+//  override def toString(): String = js.native
 }
 
 @js.native
