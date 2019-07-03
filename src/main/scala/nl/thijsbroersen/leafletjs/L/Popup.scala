@@ -29,6 +29,6 @@ object Popup extends Class {}
 @JSGlobal("L.popup")
 object popup extends js.Any {
 
-  def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined, source: js.UndefOr[Layer]): Popup =
+  def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined, source: js.UndefOr[Layer]): Popup =
     js.native
 }

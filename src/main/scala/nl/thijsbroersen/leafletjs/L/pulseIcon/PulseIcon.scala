@@ -15,5 +15,5 @@ trait PulseIcon extends Icon {}
 @JSGlobal("L.icon.pulse")
 object PulseIcon extends js.Any {
 
-  def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Icon = js.native
+  def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined): Icon = js.native
 }

@@ -11,6 +11,6 @@ trait Tooltip extends DivOverlay {}
 @JSGlobal("L.tooltip")
 object Tooltip extends js.Any {
 
-  def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined, source: js.UndefOr[Layer]): Tooltip =
+  def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined, source: js.UndefOr[Layer]): Tooltip =
     js.native
 }

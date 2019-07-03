@@ -7,15 +7,17 @@ import scala.scalajs.js.annotation.JSGlobal
 
 @js.native
 trait Draggable extends Evented {
-  def enable(): Unit = js.native
+  def enable(): Unit  = js.native
   def disable(): Unit = js.native
 }
 
 @js.native
 @JSGlobal("L.Draggable")
 object Draggable extends js.Any {
-  def apply(el: HTMLElement, dragHandle: js.UndefOr[HTMLElement] = js.undefined,
-    preventOutline: js.UndefOr[Boolean] = js.undefined, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Draggable = js.native
+  def apply(el: HTMLElement,
+            dragHandle: js.UndefOr[HTMLElement] = js.undefined,
+            preventOutline: js.UndefOr[Boolean] = js.undefined,
+            options: js.UndefOr[js.Dictionary[_]] = js.undefined): Draggable = js.native
 
   @js.native
   trait down extends Event

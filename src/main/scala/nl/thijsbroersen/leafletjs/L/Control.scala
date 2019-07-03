@@ -49,7 +49,7 @@ object control extends js.Object {
   @js.native
   @JSName("attribution")
   object attribution extends js.Any {
-    def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Attribution = js.native
+    def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined): Attribution = js.native
   }
 
   @js.native
@@ -58,19 +58,19 @@ object control extends js.Object {
     def apply(
         baselayers: js.UndefOr[Dictionary[Layer]] = js.undefined,
         overlays: js.UndefOr[Dictionary[Layer]] = js.undefined,
-        options: js.UndefOr[js.Dictionary[Any]] = js.undefined
+        options: js.UndefOr[js.Dictionary[_]] = js.undefined
     ): Layers = js.native
   }
 
   @js.native
   @JSName("scale")
   object scale extends js.Any {
-    def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Scale = js.native
+    def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined): Scale = js.native
   }
 
   @js.native
   @JSName("zoom")
   object zoom extends js.Any {
-    def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Zoom = js.native
+    def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined): Zoom = js.native
   }
 }

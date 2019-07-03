@@ -23,5 +23,5 @@ object Icon extends Class {
 @JSGlobal("L.icon")
 object icon extends js.Object {
 
-  def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Icon = js.native
+  def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined): Icon = js.native
 }

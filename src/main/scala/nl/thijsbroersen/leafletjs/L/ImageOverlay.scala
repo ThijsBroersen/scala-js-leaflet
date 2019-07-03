@@ -29,7 +29,7 @@ object imageOverlay extends js.Object {
 
   def apply(imageUrl: String | HTMLImageElement,
             bounds: LatLngBounds,
-            options: js.UndefOr[js.Dictionary[Any]] = js.undefined): ImageOverlay = js.native
+            options: js.UndefOr[js.Dictionary[_]] = js.undefined): ImageOverlay = js.native
   //  def wms(baseUrl: js.UndefOr[String] = js.undefined, options: js.UndefOr[js.Object] = js.undefined): L.WMSlayer = js.native
 }
 

@@ -23,7 +23,7 @@ object CircleMarker extends Class {}
 @js.native
 @JSGlobal("L.circleMarker")
 object circleMarker extends js.Any {
-  def apply(latlng: LatLng, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): CircleMarker = js.native
+  def apply(latlng: LatLng, options: js.UndefOr[js.Dictionary[_]] = js.undefined): CircleMarker = js.native
 }
 
 //trait CircleMarkerOptions extends PathOptions {

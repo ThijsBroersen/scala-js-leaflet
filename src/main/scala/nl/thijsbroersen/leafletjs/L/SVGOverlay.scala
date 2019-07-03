@@ -21,6 +21,6 @@ object svgOverlay extends js.Object {
 
   def apply(svg: String | SVGElement,
             bounds: LatLngBounds,
-            options: js.UndefOr[js.Dictionary[Any]] = js.undefined): SVGOverlay = js.native
+            options: js.UndefOr[js.Dictionary[_]] = js.undefined): SVGOverlay = js.native
   //  def wms(baseUrl: js.UndefOr[String] = js.undefined, options: js.UndefOr[js.Object] = js.undefined): L.WMSlayer = js.native
 }

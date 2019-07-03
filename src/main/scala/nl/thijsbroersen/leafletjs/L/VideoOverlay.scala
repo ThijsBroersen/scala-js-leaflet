@@ -24,7 +24,7 @@ object videoOverlay extends js.Object {
 
   def apply(videoUrl: String | js.Array[String] | HTMLVideoElement,
             bounds: LatLngBounds,
-            options: js.UndefOr[js.Dictionary[Any]] = js.undefined): VideoOverlay = js.native
+            options: js.UndefOr[js.Dictionary[_]] = js.undefined): VideoOverlay = js.native
   //  def wms(baseUrl: js.UndefOr[String] = js.undefined, options: js.UndefOr[js.Object] = js.undefined): L.WMSlayer = js.native
 }
 

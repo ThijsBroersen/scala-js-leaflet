@@ -15,5 +15,5 @@ object Circle extends Class {}
 @js.native
 @JSGlobal("L.circle")
 object circle extends js.Any {
-  def apply(latlng: LatLng, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Circle = js.native
+  def apply(latlng: LatLng, options: js.UndefOr[js.Dictionary[_]] = js.undefined): Circle = js.native
 }

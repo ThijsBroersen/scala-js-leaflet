@@ -28,7 +28,7 @@ object GridLayer extends Class {}
 @JSGlobal("L.gridLayer")
 object gridLayer extends js.Object {
 
-  def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): GridLayer = js.native
+  def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined): GridLayer = js.native
 }
 
 //trait GridLayerOptions extends LayerOptions {

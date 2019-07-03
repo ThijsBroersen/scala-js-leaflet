@@ -17,5 +17,5 @@ object DivIcon extends Class {}
 @JSGlobal("L.divIcon")
 object divIcon extends js.Any {
 
-  def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): DivIcon = js.native
+  def apply(options: js.UndefOr[js.Dictionary[_]] = js.undefined): DivIcon = js.native
 }

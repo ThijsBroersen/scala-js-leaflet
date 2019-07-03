@@ -21,7 +21,7 @@ trait Marker extends Layer {
 @JSGlobal("L.marker")
 object marker extends js.Any {
 
-  def apply(latlng: L.LatLng, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Marker = js.native
+  def apply(latlng: L.LatLng, options: js.UndefOr[js.Dictionary[_]] = js.undefined): Marker = js.native
 
 }
 

@@ -22,17 +22,17 @@ object TileLayer extends Class {}
 @JSGlobal("L.tileLayer")
 object tileLayer extends js.Object {
 
-  def apply(urlTemplate: String, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): TileLayer = js.native
+  def apply(urlTemplate: String, options: js.UndefOr[js.Dictionary[_]] = js.undefined): TileLayer = js.native
 
   @js.native
   @JSName("wms")
   object wms extends js.Object {
 
-    def apply(baseUrl: String, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): TileLayerWMS = js.native
+    def apply(baseUrl: String, options: js.UndefOr[js.Dictionary[_]] = js.undefined): TileLayerWMS = js.native
   }
 }
 
 @js.native
 trait TileLayerWMS extends TileLayer {
-  def setParams(params: js.Dictionary[Any], noReDraw: js.UndefOr[Boolean] = js.undefined): this.type = js.native
+  def setParams(params: js.Dictionary[_], noReDraw: js.UndefOr[Boolean] = js.undefined): this.type = js.native
 }

@@ -4,8 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal
 
 /**
- * Created by thijs on 12-4-17.
- */
+  * Created by thijs on 12-4-17.
+  */
 @js.native
 trait Rectangle extends Polygon {
 
@@ -19,5 +19,5 @@ object Rectangle extends Class {}
 @js.native
 @JSGlobal("L.rectangle")
 object rectangle extends js.Any {
-  def apply(latLngBounds: LatLngBounds, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Rectangle = js.native
+  def apply(latLngBounds: LatLngBounds, options: js.UndefOr[js.Dictionary[_]] = js.undefined): Rectangle = js.native
 }

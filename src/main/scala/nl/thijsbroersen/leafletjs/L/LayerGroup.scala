@@ -31,5 +31,5 @@ object LayerGroup extends Class {}
 object layerGroup extends js.Any {
 
   def apply(layers: js.UndefOr[Array[Layer]] = js.undefined,
-            options: js.UndefOr[js.Dictionary[Any]] = js.undefined): LayerGroup = js.native
+            options: js.UndefOr[js.Dictionary[_]] = js.undefined): LayerGroup = js.native
 }

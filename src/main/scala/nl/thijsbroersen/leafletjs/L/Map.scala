@@ -18,39 +18,39 @@ trait Map extends Evented {
   def openPopup(popup: Popup): this.type                                                                = js.native
   def openPopup(content: String | HTMLElement,
                 latLng: LatLng,
-                options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type = js.native
-  def closePopup(popup: js.UndefOr[Popup]): this.type                              = js.native
-  def openTooltip(tooltip: Tooltip): this.type                                     = js.native
+                options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type = js.native
+  def closePopup(popup: js.UndefOr[Popup]): this.type                            = js.native
+  def openTooltip(tooltip: Tooltip): this.type                                   = js.native
   def openTooltip(content: String | HTMLElement,
                   latLng: LatLng,
-                  options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type = js.native
-  def closeTooltip(tooltip: js.UndefOr[Tooltip]): this.type                          = js.native
+                  options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type = js.native
+  def closeTooltip(tooltip: js.UndefOr[Tooltip]): this.type                        = js.native
 
-  def setView(center: LatLng, zoom: Int, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type = js.native
-  def setZoom(zoom: Int, options: js.Dictionary[Any]): this.type                                            = js.native
-  def zoomIn(delta: Int, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type                 = js.native
-  def zoomOut(delta: Int, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type                = js.native
-  def setZoomAround(latLng: LatLng, zoom: Int, options: js.Dictionary[Any]): this.type                      = js.native
-  def setZoomAround(offset: Point, zoom: Int, options: js.Dictionary[Any]): this.type                       = js.native
-  def fitBounds(bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type    = js.native
-  def fitWorld(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type                           = js.native
-  def panTo(latLng: LatLng, options: js.Dictionary[Any]): this.type                                         = js.native
-  def panBy(offset: Point): this.type                                                                       = js.native
+  def setView(center: LatLng, zoom: Int, options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type = js.native
+  def setZoom(zoom: Int, options: js.Dictionary[_]): this.type                                            = js.native
+  def zoomIn(delta: Int, options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type                 = js.native
+  def zoomOut(delta: Int, options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type                = js.native
+  def setZoomAround(latLng: LatLng, zoom: Int, options: js.Dictionary[_]): this.type                      = js.native
+  def setZoomAround(offset: Point, zoom: Int, options: js.Dictionary[_]): this.type                       = js.native
+  def fitBounds(bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type    = js.native
+  def fitWorld(options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type                           = js.native
+  def panTo(latLng: LatLng, options: js.Dictionary[_]): this.type                                         = js.native
+  def panBy(offset: Point): this.type                                                                     = js.native
   def flyTo(latLng: LatLng,
             zoom: js.UndefOr[Int] = js.undefined,
-            options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type                             = js.native
-  def flyToBounds(bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type = js.native
-  def setMaxBounds(bounds: Bounds): this.type                                                              = js.native
-  def setMinZoom(zoom: Int): this.type                                                                     = js.native
-  def setMaxZoom(zoom: Int): this.type                                                                     = js.native
-  def panInsideBounds(bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type =
+            options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type                             = js.native
+  def flyToBounds(bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type = js.native
+  def setMaxBounds(bounds: Bounds): this.type                                                            = js.native
+  def setMinZoom(zoom: Int): this.type                                                                   = js.native
+  def setMaxZoom(zoom: Int): this.type                                                                   = js.native
+  def panInsideBounds(bounds: LatLngBounds, options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type =
     js.native
-  def invalidateSize(options: js.Dictionary[Any]): this.type = js.native
-  def invalidateSize(animate: Boolean): this.type            = js.native
-  def stop(): this.type                                      = js.native
+  def invalidateSize(options: js.Dictionary[_]): this.type = js.native
+  def invalidateSize(animate: Boolean): this.type          = js.native
+  def stop(): this.type                                    = js.native
 
-  def locate(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): this.type = js.native
-  def stopLocate(): this.type                                                   = js.native
+  def locate(options: js.UndefOr[js.Dictionary[_]] = js.undefined): this.type = js.native
+  def stopLocate(): this.type                                                 = js.native
 
   //  def addHandler(name: String, handlerclass: )
   def remove(): this.type                                                                      = js.native
@@ -99,5 +99,5 @@ object Map extends Class {}
 @JSGlobal("L.map")
 object map extends js.Any {
 
-  def apply(id: String | Div, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Map = js.native
+  def apply(id: String | Div, options: js.UndefOr[js.Dictionary[_]] = js.undefined): Map = js.native
 }

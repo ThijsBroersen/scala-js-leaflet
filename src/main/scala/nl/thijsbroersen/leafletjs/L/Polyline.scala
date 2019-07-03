@@ -4,18 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobal
 
 /**
- * Created by thijs on 12-4-17.
- */
+  * Created by thijs on 12-4-17.
+  */
 @js.native
 trait Polyline extends Path {
 
-  def toGeoJSON(): js.Dynamic = js.native
-  def getLatLngs(): Array[LatLng] = js.native
+  def toGeoJSON(): js.Dynamic                       = js.native
+  def getLatLngs(): Array[LatLng]                   = js.native
   def setLatLngs(latlngs: Array[LatLng]): this.type = js.native
-  def isEmpty(): Boolean = js.native
-  def getCenter(): LatLng = js.native
-  def getBounds(): LatLngBounds = js.native
-  def addLatLng(latlng: LatLng): this.type = js.native
+  def isEmpty(): Boolean                            = js.native
+  def getCenter(): LatLng                           = js.native
+  def getBounds(): LatLngBounds                     = js.native
+  def addLatLng(latlng: LatLng): this.type          = js.native
 }
 
 @js.native
@@ -25,7 +25,7 @@ object Polyline extends Class {}
 @js.native
 @JSGlobal("L.polyline")
 object polyline extends js.Any {
-  def apply(latlngs: Array[LatLng], options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Polyline = js.native
+  def apply(latlngs: Array[LatLng], options: js.UndefOr[js.Dictionary[_]] = js.undefined): Polyline = js.native
 }
 
 //trait PolylineOptions extends PathOptions {
