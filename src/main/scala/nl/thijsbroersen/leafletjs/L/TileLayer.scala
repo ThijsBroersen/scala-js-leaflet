@@ -31,6 +31,8 @@ object tileLayer extends js.Object {
     def apply(baseUrl: String, options: js.UndefOr[js.Dictionary[_]] = js.undefined): TileLayerWMS = js.native
   }
 
+  @js.native
+  @JSName("wmts")
   object wmts extends js.Object {
     def apply(url: String, options: js.UndefOr[js.Dictionary[_]] = js.undefined): TileLayerWMTS = js.native
   }
