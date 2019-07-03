@@ -2,7 +2,7 @@ enablePlugins(ScalaJSPlugin)
 
 name := "Scala.js Leaflet"
 
-normalizedName := "scalajs-leaflet"
+normalizedName := "scala-js-leaflet"
 
 organization := "nl.thijsbroersen"
 
@@ -13,3 +13,16 @@ scalacOptions ++= Seq("-deprecation", "-feature", "-P:scalajs:sjsDefinedByDefaul
 crossScalaVersions := Seq("2.11.12", "2.12.8", "2.13.0")
 
 libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.7"
+
+inThisBuild(List(
+  homepage := Some(url("https://github.com/ThijsBroersen/scala-js-leaflet")),
+  licenses := List("MIT" -> url("https://opensource.org/licenses/MIT")),
+  developers := List(
+    Developer(
+      "thijsbroersen",
+      "Thijs Broersen",
+      "thijsbroersen@gmail.com",
+      url("https://github.com/ThijsBroersen")
+    )
+  )
+))
