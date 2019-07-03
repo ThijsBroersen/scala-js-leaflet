@@ -8,8 +8,12 @@ Scala.js façade for Leaflet 1.5.1
 ## Usage
 For usage of Leaflet see: [https://leafletjs.com](https://leafletjs.com)
 
+### Getting started
+
+
 ## Dependency
 sbt
 ```
 libraryDependencies += "nl.thijsbroersen" %% "scala-js-leaflet" % "0.2"
 ```
+

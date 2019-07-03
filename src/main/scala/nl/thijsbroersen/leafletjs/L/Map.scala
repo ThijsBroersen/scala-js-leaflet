@@ -99,5 +99,5 @@ object Map extends Class {}
 @JSGlobal("L.map")
 object map extends js.Any {
 
-  def apply(el: Div, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Map = js.native
+  def apply(id: String | Div, options: js.UndefOr[js.Dictionary[Any]] = js.undefined): Map = js.native
 }
