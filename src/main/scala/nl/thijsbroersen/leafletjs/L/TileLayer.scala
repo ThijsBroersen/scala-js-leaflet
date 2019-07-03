@@ -30,9 +30,18 @@ object tileLayer extends js.Object {
 
     def apply(baseUrl: String, options: js.UndefOr[js.Dictionary[_]] = js.undefined): TileLayerWMS = js.native
   }
+
+  object wmts extends js.Object {
+    def apply(url: String, options: js.UndefOr[js.Dictionary[_]] = js.undefined): TileLayerWMTS = js.native
+  }
 }
 
 @js.native
 trait TileLayerWMS extends TileLayer {
   def setParams(params: js.Dictionary[_], noReDraw: js.UndefOr[Boolean] = js.undefined): this.type = js.native
+}
+
+@js.native
+trait TileLayerWMTS extends TileLayer {
+  def defaultWmtsParams: js.Dictionary[js.Any] = js.native
 }
