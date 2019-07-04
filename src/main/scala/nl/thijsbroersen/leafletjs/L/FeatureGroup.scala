@@ -3,6 +3,7 @@ package nl.thijsbroersen.leafletjs.L
 import scala.scalajs.js
 import scala.scalajs.js.Array
 import scala.scalajs.js.annotation.JSGlobal
+import scala.scalajs.js.annotation.JSName
 
 @js.native
 trait FeatureGroup extends LayerGroup {
@@ -15,11 +16,21 @@ trait FeatureGroup extends LayerGroup {
 
 @js.native
 @JSGlobal("L.FeatureGroup")
-object FeatureGroup extends Class {}
+object FeatureGroup extends Class {
+  @js.native
+  @JSName("L.FeatureGroup.SubGroup")
+  object SubGroup extends Class {}
+}
 
 @js.native
 @JSGlobal("L.featureGroup")
 object featureGroup extends js.Any {
 
   def apply(layers: Array[Layer]): FeatureGroup = js.native
+
+  @js.native
+  @JSName("L.subGroup")
+  object subGroup extends js.Any {
+    def apply(options: js.UndefOr[js.Dictionary[Any]] = js.undefined): SubGroup = js.native
+  }
 }
