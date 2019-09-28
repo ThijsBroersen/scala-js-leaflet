@@ -1,17 +1,26 @@
 language: scala
-scala:
+scala: 
   - 2.11.12
-  - 2.12.8
-  - 2.13.0
-jdk:
-  - oraclejdk8
-before_install: git fetch --tags
-script: sbt ci-release
+  - 2.12.10
+  - 2.13.1
+jdk: oraclejdk8
+stages:
+  - name: test
+  - name: release
+    if: ((branch = master AND type = push) OR (tag IS present)) AND NOT fork
+jobs:
+  include:
+    - name: compile
+      script: sbt compile
+    - stage: release
+      scala: 2.13.1
+      before_install: git fetch --tags
+      script: sbt ci-release
 before_cache:
   - find $HOME/.sbt -name "*.lock" -delete
   - find $HOME/.ivy2/cache -name "ivydata-*.properties" -delete
 cache:
   directories:
+    - $HOME/.cache/coursier
     - $HOME/.ivy2/cache
-    - $HOME/.sbt/boot
-    - $HOME/.coursier
+    - $HOME/.sbt
