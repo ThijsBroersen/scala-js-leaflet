@@ -1,5 +1,3 @@
-[![](https://jitpack.io/v/nl.thijsbroersen/scala-js-leaflet.svg)](https://jitpack.io/#nl.thijsbroersen/scala-js-leaflet)
-[![Release](https://jitpack.io/v/nl.thijsbroersen/scala-js-leaflet.svg)](https://jitpack.io/#nl.thijsbroersen/scala-js-leaflet)
 [![Build Status](https://travis-ci.com/ThijsBroersen/scala-js-leaflet.svg)](https://travis-ci.com/ThijsBroersen/scala-js-leaflet)
 
 # Scala-js Leaflet
@@ -14,6 +12,6 @@ scala versions: 2.11.12, 2.12.10, 2.13.1
 ## Dependency
 sbt
 ```
-libraryDependencies += "nl.thijsbroersen" %% "scala-js-leaflet" % "0.2.6"
+libraryDependencies += "nl.thijsbroersen" %% "scala-js-leaflet" % "0.3.0"
 ```
 
