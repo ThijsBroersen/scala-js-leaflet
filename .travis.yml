@@ -1,8 +1,4 @@
 language: scala
-scala: 
-  - 2.11.12
-  - 2.12.10
-  - 2.13.1
 jdk: oraclejdk8
 stages:
   - name: test
@@ -10,10 +6,9 @@ stages:
     if: ((branch = master AND type = push) OR (tag IS present)) AND NOT fork
 jobs:
   include:
-    - name: compile
-      script: sbt compile
+    - name: test
+      script: sbt +compile
     - stage: release
-      scala: 2.13.1
       before_install: git fetch --tags
       script: sbt ci-release
 before_cache:
