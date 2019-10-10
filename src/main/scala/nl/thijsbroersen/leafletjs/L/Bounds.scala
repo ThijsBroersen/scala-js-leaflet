@@ -33,5 +33,5 @@ object Bounds extends js.Any {}
 object bounds extends js.Any {
 
   def apply(corner1: L.Point, corner2: L.Point): L.Bounds = js.native
-  def apply(points: Array[L.Point]): L.Bounds             = js.native
+  def apply(points: js.Array[L.Point]): L.Bounds          = js.native
 }

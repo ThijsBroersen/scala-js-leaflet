@@ -35,7 +35,7 @@ object point extends js.Any {
 
   def apply(x: Double, y: Double, round: js.UndefOr[Boolean] = js.undefined): Point = js.native
 
-  def apply(coords: Array[Double]): Point = js.native
+  def apply(coords: js.Array[Double]): Point = js.native
 
   def apply(coords: js.Dynamic): Point = js.native
 }

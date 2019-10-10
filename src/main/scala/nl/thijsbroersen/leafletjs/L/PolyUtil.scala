@@ -6,6 +6,6 @@ import scala.scalajs.js.annotation.JSGlobal
 @js.native
 @JSGlobal("L.PolyUtil")
 object PolyUtil extends js.Any {
-  def clipPolygon(points: Array[Point], bounds: Bounds, round: js.UndefOr[Boolean] = js.undefined): Array[Point] =
+  def clipPolygon(points: js.Array[Point], bounds: Bounds, round: js.UndefOr[Boolean] = js.undefined): js.Array[Point] =
     js.native
 }

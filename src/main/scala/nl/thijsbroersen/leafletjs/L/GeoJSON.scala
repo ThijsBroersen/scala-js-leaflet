@@ -18,17 +18,17 @@ object GeoJSON extends Class {
   def geometryToLayer(featureData: js.Dynamic, options: js.UndefOr[js.Dictionary[_]] = js.undefined): GeoJSON =
     js.native
 
-  def coordsToLatLng(coords: Array[Double]): LatLng = js.native
+  def coordsToLatLng(coords: js.Array[Double]): LatLng = js.native
 
-  def coordsToLatLngs(coords: Array[Double],
+  def coordsToLatLngs(coords: js.Array[Double],
                       levelsDeep: js.UndefOr[Int] = js.undefined,
-                      coordsToLatLng: js.Function1[Array[Double], LatLng]): Array[LatLng] = js.native
+                      coordsToLatLng: js.Function1[Array[Double], LatLng]): js.Array[LatLng] = js.native
 
-  def latLngToCoords(latlng: LatLng, precision: js.UndefOr[Int] = js.undefined): Array[Double] = js.native
+  def latLngToCoords(latlng: LatLng, precision: js.UndefOr[Int] = js.undefined): js.Array[Double] = js.native
 
   def latLngsToCoords(latlng: LatLng,
                       levelsDeep: js.UndefOr[Int] = js.undefined,
-                      closed: js.UndefOr[Boolean] = js.undefined): Array[Double] = js.native
+                      closed: js.UndefOr[Boolean] = js.undefined): js.Array[Double] = js.native
 
   def asFeature(geojson: js.Dynamic): js.Dynamic = js.native
 }

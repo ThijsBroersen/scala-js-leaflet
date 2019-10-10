@@ -29,7 +29,7 @@ object latLng extends js.Any {
 
   def apply(latitude: Double, longitude: Double, altitude: js.UndefOr[Double] = js.undefined): L.LatLng = js.native
 
-  def apply(coords: Array[Double]): L.LatLng = js.native
+  def apply(coords: js.Array[Double]): L.LatLng = js.native
 
   def apply(coords: js.Dynamic): L.LatLng = js.native
 }

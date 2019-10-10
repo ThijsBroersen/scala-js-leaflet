@@ -19,10 +19,10 @@ trait CRS extends js.Object {
   def wrapLatLng(latlng: LatLng): LatLng                   = js.native
   def wrapLatLngBounds(bounds: LatLngBounds): LatLngBounds = js.native
 
-  val code: String           = js.native
-  val wrapLng: Array[Double] = js.native
-  val wrapLat: Array[Double] = js.native
-  val infinite: Boolean      = js.native
+  val code: String              = js.native
+  val wrapLng: js.Array[Double] = js.native
+  val wrapLat: js.Array[Double] = js.native
+  val infinite: Boolean         = js.native
 }
 
 @js.native

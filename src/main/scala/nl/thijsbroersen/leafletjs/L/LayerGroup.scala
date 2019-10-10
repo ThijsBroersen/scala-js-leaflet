@@ -17,7 +17,7 @@ trait LayerGroup extends Layer {
   def eachLayer(fn: js.Function1[Layer, Unit], context: js.UndefOr[js.Object] = js.undefined): this.type =
     js.native
   def getLayer(id: Int): Layer          = js.native
-  def getLayers(): Array[Layer]         = js.native
+  def getLayers(): js.Array[Layer]      = js.native
   def setZIndex(zIndex: Int): this.type = js.native
   def getLayerId(layer: Layer): Int     = js.native
 }

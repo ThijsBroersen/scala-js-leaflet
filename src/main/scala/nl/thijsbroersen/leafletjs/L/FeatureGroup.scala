@@ -1,7 +1,6 @@
 package nl.thijsbroersen.leafletjs.L
 
 import scala.scalajs.js
-import scala.scalajs.js.Array
 import scala.scalajs.js.annotation.JSGlobal
 import scala.scalajs.js.annotation.JSName
 
@@ -26,7 +25,7 @@ object FeatureGroup extends Class {
 @JSGlobal("L.featureGroup")
 object featureGroup extends js.Any {
 
-  def apply(layers: Array[Layer]): FeatureGroup = js.native
+  def apply(layers: js.Array[Layer]): FeatureGroup = js.native
 
   @js.native
   @JSName("L.subGroup")

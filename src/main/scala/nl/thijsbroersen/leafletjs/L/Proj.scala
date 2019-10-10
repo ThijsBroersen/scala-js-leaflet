@@ -48,8 +48,8 @@ object Proj extends js.Any {
 //trait CRSOptions extends js.Object {
 //  val origin: js.Array[Double] = js.native
 //  val transformation: Transformation = js.native
-//  val scales: Array[Double] = js.native
-//  val resolutions: Array[Double] = js.native
+//  val scales: js.Array[Double] = js.native
+//  val resolutions: js.Array[Double] = js.native
 //  val bounds: Bounds = js.native
 //}
 //

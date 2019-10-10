@@ -38,5 +38,5 @@ object LatLngBounds extends Class {}
 object latLngBounds extends js.Any {
 
   def apply(corner1: L.LatLng, corner2: L.LatLng): L.LatLngBounds = js.native
-  def apply(latlngs: Array[LatLng]): L.LatLngBounds               = js.native
+  def apply(latlngs: js.Array[LatLng]): L.LatLngBounds            = js.native
 }
